@@ -1,0 +1,43 @@
+{
+  "name": "SE",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer",
+    "desktop": "meteor-desktop"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.3.4",
+    "@fortawesome/fontawesome-free": "^5.8.1",
+    "@reach/router": "^1.2.1",
+    "antd": "^3.16.3",
+    "axios": "^0.18.0",
+    "bootstrap-css-only": "^4.3.1",
+    "electron": "^4.1.4",
+    "indexof": "0.0.1",
+    "mdbreact": "^4.13.0",
+    "meteor-node-stubs": "^0.4.1",
+    "moment": "^2.24.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-highlight-words": "^0.16.0",
+    "simpl-schema": "^1.5.5",
+    "uniforms": "^1.31.1",
+    "uniforms-antd": "^1.31.1",
+    "uniforms-bootstrap4": "^1.31.1"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.jsx",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  },
+  "devDependencies": {
+    "electron-builder": "20.28.4",
+    "electron-packager": "12.1.2",
+    "meteor-desktop": "^2.0.0"
+  }
+}
