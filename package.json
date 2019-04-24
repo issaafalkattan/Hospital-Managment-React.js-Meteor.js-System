@@ -38,6 +38,7 @@
   "devDependencies": {
     "electron-builder": "20.28.4",
     "electron-packager": "12.1.2",
-    "meteor-desktop": "^2.0.0"
+    "meteor-desktop": "^2.0.0",
+    "react-to-print": "^2.1.1"
   }
 }

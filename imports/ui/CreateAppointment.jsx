@@ -3,7 +3,7 @@ import SimpleSchema from 'simpl-schema';
 import { withTracker } from 'meteor/react-meteor-data';
 import {Patient} from '../api/patient'
 import axios from 'axios';
-import {Card} from 'antd'
+import {Card, message} from 'antd'
 import { AutoForm, SelectField, DateField, LongTextField } from 'uniforms-antd';
 import SubmitField from 'uniforms-antd/SubmitField';
 
@@ -13,7 +13,15 @@ state={
 }
 submitHandler = (doc) => {
    
-    Meteor.call("appointments.insert.new", doc);
+    Meteor.call("appointments.insert.new", doc, (err)=>{
+      if(err){
+        message.error(err.reason)
+      }
+      else {
+        message.success('Saved Successfully'); 
+        this.props.close();
+      }
+    });
       };
     componentWillMount() {
         axios.get('./doctors.json') // JSON File Path
@@ -60,7 +68,7 @@ submitHandler = (doc) => {
         <Card loading={!this.props.ready}>
         <AutoForm
           placeholder
-          onSubmitSuccess={() => { message.success('Saved Successfully', 1); this.props.close(); }}
+          onSubmitSuccess={() => { console.log("sucess")}}
           onSubmitFailure={() => { this.setState({ loading: false }); message.error('Something Went Wrong.'); }}
           onSubmit={(doc) => { this.setState({ loading: true }); this.submitHandler(doc); }}
           schema={Schema}

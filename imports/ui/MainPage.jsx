@@ -7,6 +7,7 @@ import ListPatients from './listPatients';
 import CreatePatient from './createPatient';
 import Appointments from './Appointments';
 import Doctors from './Doctors';
+import Invoices from './Invoice';
 
 const SubMenu = Menu.SubMenu;
   const {
@@ -33,13 +34,14 @@ class Main extends Component {
           <Menu.Item style={{paddingBottom : '20%'}} key="7"><Link to="/appointments" style={{color : 'white'}}><Icon type="schedule" />Appointments</Link></Menu.Item>
           <Menu.Item  key="8"><Link to="/doctors" style={{color : 'white'}}>    <i class="fas fa-user-md" style={{marginRight : "5px"}}/>
 Doctors</Link></Menu.Item>
-
+<Menu.Item  key="9"><Link to="/invoices" style={{color : 'white'}}>    <i class="fas fa-file-invoice" style={{marginRight : "5px"}}/>
+Invoices</Link></Menu.Item>
           </Menu>
         </Sider>
         <Layout>
           <Header style={{ background: '#2BBBAD', padding: 0 }} >
           <Col span={20} >
-          <h3 style={{color : "white", textAlign : 'center', fontWeight : 'bold', marginTop : '1%'}}>AAIL Hospital</h3>
+     <img style={{height : "200px", marginTop : '-60px'}} src="./logo2.png" />
           </Col>
           <Col span={4}>
           <Button type="danger" onClick={() => {Meteor.logout();         location.reload();}}>Log Out</Button>
@@ -53,6 +55,7 @@ Doctors</Link></Menu.Item>
               </CreatePatient>
               <Appointments path="/appointments" />
               <Doctors path="/doctors" />
+              <Invoices path="/invoices" />
           </Router>
           </Content>
           <Footer style={{ textAlign: 'center' }}>

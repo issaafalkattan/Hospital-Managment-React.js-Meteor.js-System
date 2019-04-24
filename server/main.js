@@ -2,6 +2,7 @@
 import {Patient} from '../imports/api/patient';
 import {Appointment}from '../imports/api/appointment';
 import '../imports/api/methods';
+import { Invoice } from '../imports/api/invoice';
 Meteor.startup(() => {
     
   
@@ -15,7 +16,11 @@ Meteor.startup(() => {
       
     }
   });
-  
+  Meteor.publish("getInvoices", () => {
+
+
+    return Invoice.find({});
+  })
 
   Meteor.publish("getPatients", () => {
 

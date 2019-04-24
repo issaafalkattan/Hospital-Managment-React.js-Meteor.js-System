@@ -7,12 +7,12 @@ class componentName extends Component {
         <div className="greenBg">
         <section className="text-center my-5">
         <h2 className="h1-responsive font-weight-bold my-5">
-           AAIL Hospital System
+           <img src="./logo2.png" style={{ height : "300px", alignSelf: 'center',}}/>
         </h2>
         <p className="lead grey-text w-responsive mx-auto mb-5">
           Please select a view.
         </p>
-        <MDBRow style={{paddingTop : '10%', marginLeft : '10%', marginRight : '10%'}}>
+        <MDBRow style={{marginLeft : '10%', marginRight : '10%'}}>
           <MDBCol md="6">
             <a href="/view"><MDBIcon icon="procedures" size="6x" className="red-text" />
             <h5 className="font-weight-bold my-4">Patients View</h5>
