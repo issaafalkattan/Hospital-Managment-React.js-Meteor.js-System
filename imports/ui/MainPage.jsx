@@ -50,9 +50,9 @@ Invoices</Link></Menu.Item>
           <Content style={{minHeight :"100vh"}}>
           <Router>
               <ListPatients path="/patients"/>
-              <CreatePatient path="/add-patient" >
-              <CreatePatient path="/:id" />
-              </CreatePatient>
+              <CreatePatient path="/add-patient" />
+              <CreatePatient path="/add-patient/:id" />
+         
               <Appointments path="/appointments" />
               <Doctors path="/doctors" />
               <Invoices path="/invoices" />

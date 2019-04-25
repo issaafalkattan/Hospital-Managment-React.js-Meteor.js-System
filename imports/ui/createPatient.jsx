@@ -32,7 +32,7 @@ const Wrapper = withTracker((props) => {
     console.log(id);
     const isUpdate = !!id;
    const status = Meteor.subscribe("getPatients");
-   const data = id ? Patient.findOne({id : id}) : {};
+   const data = id ? Patient.findOne({_id : id}) : {};
    console.log("Got data", data)
 const ready = status.ready();
 return{
