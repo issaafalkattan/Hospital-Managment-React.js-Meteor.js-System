@@ -1,4 +1,4 @@
-# SE Project
+# Hospital Managment React.js System
 
 
 # Before Running!
@@ -12,10 +12,14 @@ $ meteor //to run
   
 # To run desktop version: 
 ```sh
-$ npm run desktop 
+$ npm run desktop --win --mac
 ```
 
-Notes
-> To add routes, add them either to the MainPage.js if they are a loggedIn route, or in the App.js if they do not require login
-> For UI components https://mdbootstrap.com/docs/react/ or https://ant.design/components/https://ant.design/components/ are both installed and have a ton of features
+Features
+> Patient Frontend view that doesn't require login, uses a token given to the patient by a nurse/staff member to allow the patient to view appointment status or view/print invoice.
+> Staff/Nurse view that allows for patient record CRUD, appointment creation and managment and generates a token for every appointment to be given to the patient in question
+> Invoice creation with automatic late fee detection and calculation that automatically adds a 1% fee to every late day, and generates an invoice 
 
+<p align="center">
+  <img src="./public/screenshot.jpg" width="350" title="Invoice">
+</p>
