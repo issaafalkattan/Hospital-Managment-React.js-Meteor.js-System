@@ -24,7 +24,7 @@ For nurse login :
 Features
 - Patient Frontend view that doesn't require login, uses a token given to the patient by a nurse/staff member to allow the patient to view appointment status or view/print invoice.
 <p align="center">
-  <img src="./public/views.jpeg" width="350" title="Invoice">
+  <img src="./public/views.jpg" width="350" title="Invoice">
 </p>
 
 <p align="center">
@@ -33,10 +33,10 @@ Features
 
 - Staff/Nurse view that allows for patient record CRUD, appointment creation and managment and generates a token for every appointment to be given to the patient in question
 <p align="center">
-  <img src="./public/invoiceCreate.jpeg" width="350" title="Invoice">
+  <img src="./public/invoiceCreate.jpg" width="350" title="Invoice">
 </p>
 <p align="center">
-  <img src="./public/invoiceTable.jpeg" width="350" title="Invoice">
+  <img src="./public/invoiceTable.jpg" width="350" title="Invoice">
 </p>
 - Invoice creation with automatic late fee detection and calculation that automatically adds a 1% fee to every late day, and generates an invoice 
 
