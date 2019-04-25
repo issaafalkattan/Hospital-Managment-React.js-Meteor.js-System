@@ -32,9 +32,8 @@ Features
 </p>
 
 - Staff/Nurse view that allows for patient record CRUD, appointment creation and managment and generates a token for every appointment to be given to the patient in question
-<p align="center">
-  <img src="./public/invoiceCreate.jpg" width="350" title="Invoice">
-</p>
+
+![Invoice Creation](./public/invoiceCreate.jpg)
 <p align="center">
   <img src="./public/invoiceTable.jpg" width="350" title="Invoice">
 </p>
